@@ -51,7 +51,7 @@ h2 {
 
 #top_button {
 	display : flex;
-	justify-content: right;
+	justify-content: flex-end;
 }
 
 #bottom{
