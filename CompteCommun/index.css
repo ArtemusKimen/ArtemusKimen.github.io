@@ -20,6 +20,7 @@ body
 
 #top_picture {
 	height: 500px;
+	animation: appearLeft 2s;
 }
 
 #top_text {
@@ -36,10 +37,7 @@ h1 {
 	max-width: 500px;
 	overflow: hidden;
     text-overflow: ellipsis;
-}
-
-h2 {
-	margin-bottom: 160px;
+    animation: appearTop 2s;
 }
 
 #top_description {
@@ -47,11 +45,13 @@ h2 {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	margin-bottom: 10px;
+	animation: appearRight 2s;
 }
 
 #top_button {
-	display : flex;
+	display: flex;
 	justify-content: flex-end;
+	animation: fadeIn 3s;
 }
 
 #bottom{
@@ -88,4 +88,47 @@ footer {
 	padding-bottom: 20px;
 	color: #0277BD;
 	text-align: right;
+}
+
+/****************************
+*		ANIMATIONS			*
+****************************/
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	66% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes appearTop {
+	0% { 
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes appearRight {
+	0% { 
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes appearLeft {
+	0% { 
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
 }
